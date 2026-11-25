@@ -12,7 +12,7 @@ func Anagrammi(s string) (risultato []string) {
 	for i := 0; i < len(s); i++ {
 		letteraIniziale := string(s[i])
 		resto := s[:i] + s[i+1:]
-		anag := anagrammi(resto)
+		anag := Anagrammi(resto)
 		for _, anagramma := range anag {
 			nuovoAnagramma := letteraIniziale + anagramma
 			if !slices.Contains(risultato, nuovoAnagramma) {
@@ -25,7 +25,7 @@ func Anagrammi(s string) (risultato []string) {
 
 func main() {
 	s := os.Args[1]
-	x := anagrammi(s)
+	x := Anagrammi(s)
 	for _, anagramma := range x {
 		fmt.Println(anagramma)
 	}
