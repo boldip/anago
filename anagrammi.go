@@ -23,7 +23,7 @@ func Anagrammi(s string) (risultato []string) {
 	return risultato
 }
 
-func finta(s string) string {
+func Finta(s string) string {
 	return "*" + s + "*"
 }
 
