@@ -23,6 +23,10 @@ func Anagrammi(s string) (risultato []string) {
 	return risultato
 }
 
+func finta(s string) string {
+	return "*" + s + "*"
+}
+
 func main() {
 	s := os.Args[1]
 	x := Anagrammi(s)
